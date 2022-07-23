@@ -1,11 +1,14 @@
 from turtle import Turtle
 from gpiozero import Button
 from time import sleep
+#define the shape of the turtle
 harold = Turtle(shape = 'triangle')
+#define what pins correspond to what buttons on the button matrix
 forward = Button('BOARD37')
 back = Button('BOARD33')
 left = Button('BOARD22')
 right = Button('BOARD35')
+#define movement
 while not back.is_pressed:
     if forward.is_pressed:
         harold.forward(10)
